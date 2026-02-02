@@ -1,12 +1,13 @@
 # FlareSolverr
 
 [![Latest release](https://img.shields.io/github/v/release/FlareSolverr/FlareSolverr)](https://github.com/FlareSolverr/FlareSolverr/releases)
-[![Docker Pulls](https://img.shields.io/docker/pulls/flaresolverr/flaresolverr)](https://hub.docker.com/r/flaresolverr/flaresolverr/)
+[![Docker Pulls](https://img.shields.io/docker/pulls/flaresolverr/flaresolverr)](https://hub.docker.com/r/flaresolverr/flaresolverr)
+[![Docker Stars](https://img.shields.io/docker/stars/flaresolverr/flaresolverr)](https://hub.docker.com/r/flaresolverr/flaresolverr)
 [![GitHub issues](https://img.shields.io/github/issues/FlareSolverr/FlareSolverr)](https://github.com/FlareSolverr/FlareSolverr/issues)
 [![GitHub pull requests](https://img.shields.io/github/issues-pr/FlareSolverr/FlareSolverr)](https://github.com/FlareSolverr/FlareSolverr/pulls)
-[![Donate PayPal](https://img.shields.io/badge/Donate-PayPal-yellow.svg)](https://www.paypal.com/paypalme/diegoheras0xff)
-[![Donate Bitcoin](https://img.shields.io/badge/Donate-Bitcoin-f7931a.svg)](https://www.blockchain.com/btc/address/13Hcv77AdnFWEUZ9qUpoPBttQsUT7q9TTh)
-[![Donate Ethereum](https://img.shields.io/badge/Donate-Ethereum-8c8c8c.svg)](https://www.blockchain.com/eth/address/0x0D1549BbB00926BF3D92c1A8A58695e982f1BE2E)
+[![GitHub Repo stars](https://img.shields.io/github/stars/FlareSolverr/FlareSolverr)](https://github.com/FlareSolverr/FlareSolverr)
+
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/ngosang)
 
 FlareSolverr is a proxy server to bypass Cloudflare and DDoS-GUARD protection.
 
@@ -50,7 +51,9 @@ We provide a `docker-compose.yml` configuration file. Clone this repository and 
 `docker-compose up -d` _(Compose V1)_ or `docker compose up -d` _(Compose V2)_ to start
 the container.
 
-If you prefer the `docker cli` execute the following command.
+If you prefer the `docker cli` execute the following command:
+
+**Bash**
 
 ```bash
 docker run -d \
@@ -59,6 +62,12 @@ docker run -d \
   -e LOG_LEVEL=info \
   --restart unless-stopped \
   ghcr.io/flaresolverr/flaresolverr:latest
+```
+
+**Command Prompt or Powershell**
+
+```cmd
+docker run -d --name=flaresolverr -p 8191:8191 -e LOG_LEVEL=info --restart unless-stopped ghcr.io/flaresolverr/flaresolverr:latest
 ```
 
 If your host OS is Debian, make sure `libseccomp2` version is 2.5.x. You can check the version with `sudo apt-cache policy libseccomp2`
@@ -335,3 +344,4 @@ to the file name of one of the adapters inside the `/captcha` directory.
 ## Related projects
 
 - C# implementation => https://github.com/FlareSolverr/FlareSolverrSharp
+
